@@ -3,53 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatizaciones Bisney | Soluciones con IA</title>
+    <title>Automatizaciones Bisney | Liderando con Inteligencia Artificial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #2563eb;
-            --dark: #1e293b;
+            --secondary: #64748b;
+            --dark: #0f172a;
             --light: #f8fafc;
+            --accent: #3b82f6;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, sans-serif;
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
             background-color: var(--light);
             color: var(--dark);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+            color: white;
+            padding: 5rem 1rem;
             text-align: center;
         }
-        header {
-            background-color: var(--dark);
-            color: white;
-            padding: 3rem 1rem;
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
         }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
+            max-width: 1000px;
+            margin: -3rem auto 3rem;
             padding: 0 1rem;
         }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: #ffffff;
+        }
+
         .btn {
             display: inline-block;
             background-color: var(--primary);
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 2rem;
             text-decoration: none;
-            border-radius: 5px;
-            margin: 10px;
-            transition: background 0.3s;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
         }
+
         .btn:hover {
-            background-color: #1d4ed8;
+            background-color: var(--accent);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
         }
-        .links-legales {
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            border-top: 1px solid #ccc;
-            padding-top: 1rem;
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: var(--dark);
+            color: #94a3b8;
         }
-        .links-legales a {
-            color: #64748b;
+
+        .legal-links a {
+            color: white;
+            text-decoration: none;
             margin: 0 10px;
+            font-size: 0.85rem;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -57,22 +120,43 @@
 
     <header>
         <h1>Automatizaciones Bisney</h1>
-        <p>Eficiencia y tecnología mediante Inteligencia Artificial y Automatización</p>
+        <p>Haciendo que la tecnología trabaje para ti. Soluciones avanzadas con n8n e Inteligencia Artificial.</p>
     </header>
 
     <div class="container">
-        <h2>Nuestros Servicios</h2>
-        <p>Transformamos procesos manuales en flujos automáticos optimizados.</p>
-        
-        <a href="#" class="btn">Ver Proyectos</a>
-        <a href="https://t.me/TuUsuario" class="btn" style="background-color: #0088cc;">Contacto Telegram</a>
-
-        <div class="links-legales">
-            <p>Información Legal para Meta:</p>
-            <a href="privacy.html">Política de Privacidad</a>
-            <a href="conditions.html">Términos y Condiciones</a>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-robot"></i>
+                <h3>Automatización</h3>
+                <p>Conectamos tus herramientas favoritas para que tus procesos fluyan sin intervención humana.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>IA Avanzada</h3>
+                <p>Implementamos modelos de lenguaje para analizar, crear y decidir dentro de tus flujos de trabajo.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-bolt"></i>
+                <h3>Eficiencia</h3>
+                <p>Reduce errores y libera tiempo creativo eliminando las tareas repetitivas de tu día a día.</p>
+            </div>
         </div>
     </div>
+
+    <section class="cta-section">
+        <h2>¿Listo para escalar tu negocio?</h2>
+        <p>Hablemos sobre cómo podemos transformar tu flujo de trabajo hoy mismo.</p>
+        <br>
+        <a href="https://t.me/TuUsuario" class="btn"><i class="fab fa-telegram"></i> Contactar por Telegram</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Automatizaciones Bisney. Todos los derechos reservados.</p>
+        <div class="legal-links">
+            <a href="privacy.html">Privacidad</a> | 
+            <a href="conditions.html">Términos</a>
+        </div>
+    </footer>
 
 </body>
 </html>
