@@ -12,10 +12,11 @@
             --dark: #0f172a;
             --light: #f8fafc;
             --accent: #3b82f6;
+            --whatsapp: #25d366;
         }
 
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             line-height: 1.6;
             background-color: var(--light);
@@ -29,18 +30,8 @@
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -1px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; letter-spacing: -1px; }
+        header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
 
         .container {
             max-width: 1000px;
@@ -64,21 +55,10 @@
             transition: transform 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+        .card:hover { transform: translateY(-5px); }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
 
-        .card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 4rem 1rem;
-            background: #ffffff;
-        }
+        .cta-section { text-align: center; padding: 4rem 1rem; background: #ffffff; }
 
         .btn {
             display: inline-block;
@@ -89,12 +69,32 @@
             border-radius: 8px;
             font-weight: bold;
             transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
         }
 
-        .btn:hover {
-            background-color: var(--accent);
-            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        /* Estilos del Botón Flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
         }
 
         footer {
@@ -104,19 +104,17 @@
             color: #94a3b8;
         }
 
-        .legal-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.85rem;
-        }
-
-        .legal-links a:hover {
-            text-decoration: underline;
-        }
+        .legal-links a { color: white; text-decoration: none; margin: 0 10px; font-size: 0.85rem; }
+        .legal-links a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+
+    <a href="https://wa.me/TU_NUMERO?text=Hola%20Automatizaciones%20Bisney,%20necesito%20ayuda%20con%20una%20automatización" 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <header>
         <h1>Automatizaciones Bisney</h1>
@@ -147,14 +145,16 @@
         <h2>¿Listo para escalar tu negocio?</h2>
         <p>Hablemos sobre cómo podemos transformar tu flujo de trabajo hoy mismo.</p>
         <br>
-        <a href="https://t.me/TuUsuario" class="btn"><i class="fab fa-telegram"></i> Contactar por Telegram</a>
+        <a href="https://t.me/TuUsuario" class="btn" style="background-color: #0088cc;">
+            <i class="fab fa-telegram"></i> Grupo de Telegram
+        </a>
     </section>
 
     <footer>
         <p>&copy; 2026 Automatizaciones Bisney. Todos los derechos reservados.</p>
         <div class="legal-links">
-            <a href="privacy.html">Privacidad</a> | 
-            <a href="conditions.html">Términos</a>
+            <a href="./privacy.html">Privacidad</a> | 
+            <a href="./conditions.html">Términos</a>
         </div>
     </footer>
 
