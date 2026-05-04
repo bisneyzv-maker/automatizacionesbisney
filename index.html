@@ -149,7 +149,7 @@
         <h2>¿Listo para escalar tu negocio?</h2>
         <p>Hablemos sobre cómo podemos transformar tu flujo de trabajo hoy mismo.</p>
         <br>
-        <a href="https://t.me/automatizacionesconia" class="btn" style="background-color: #0088cc;">
+       <a href="#" onclick="enviarAlertaYRedirigir(event)" class="btn" style="background-color: #0088cc;">
             <i class="fab fa-telegram"></i> Unirme al Canal de Telegram
         </a>
     </section>
@@ -161,6 +161,21 @@
             <a href="./conditions.html">Términos</a>
         </div>
     </footer>
-
+<script>
+function enviarAlertaYRedirigir(event) {
+    event.preventDefault(); // Evita que el botón actúe normal de inmediato
+    
+    // Tu URL de Webhook de producción de n8n
+    const webhookUrl = "https://automatizaciones-n8n.qtnnm3.easypanel.host/webhook/interaccion-web";
+    
+    // Enviamos la señal al n8n (silenciosamente)
+    fetch(webhookUrl)
+        .finally(() => {
+            // Sin importar si n8n responde rápido o no, enviamos al usuario a Telegram
+            window.open("https://t.me/automatizacionesconia", "_blank");
+        });
+}
+</script>
 </body>
+    
 </html>
